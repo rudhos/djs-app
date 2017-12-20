@@ -267,6 +267,10 @@ $white: #ffffff;
 .icon-enav-42:before {
   content: '\e829'; }
 
+/* 'εáÇ' */
+.icon-enav-43:before {
+  content: '\e82A'; }
+
 @mixin clearfix() {
   &::after {
     display: block;

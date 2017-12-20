@@ -236,6 +236,10 @@ Version: 1.0
 .icon-enav-42:before {
   content: '\e829'; }
 
+/* '╬╡├í├ç' */
+.icon-enav-43:before {
+  content: '\e82A'; }
+
 /**
  * 2. GLOBAL
  * -----------------------------------------------------------------------------
@@ -552,7 +556,7 @@ a, a:hover, a:active, a:focus {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); }
 
-.panah, .box.navhome:before, .box.item-tracking:before, .box.history .detail:after, .box.order .detail:after {
+.panah, .box.navhome:before, .box.item-tracking:before, .box.history .detail:after, .box.order .detail:after, .box.pilih-perusahaan .detail:after {
   font-family: "i-webfont";
   content: '\e81E';
   color: #bf1e2e;
@@ -641,13 +645,13 @@ a, a:hover, a:active, a:focus {
       border-bottom: 1px solid #e7e7e7; }
       .box.history .item:last-child {
         border-bottom: 0; }
-    .box.history .nopol, .box.history .kurir {
+    .box.history .nopol, .box.history .kurir, .box.history .box.pilih-perusahaan .lokasi, .box.pilih-perusahaan .box.history .lokasi {
       color: #df3143;
       font-weight: 900;
       margin-left: 40px;
       margin-bottom: 10px;
       position: relative; }
-      .box.history .nopol:before, .box.history .kurir:before {
+      .box.history .nopol:before, .box.history .kurir:before, .box.history .box.pilih-perusahaan .lokasi:before, .box.pilih-perusahaan .box.history .lokasi:before {
         font-family: "i-webfont";
         content: '\e821';
         color: #df3143;
@@ -656,7 +660,7 @@ a, a:hover, a:active, a:focus {
         left: -38px;
         top: -10px;
         font-weight: normal; }
-      .box.history .nopol span, .box.history .kurir span {
+      .box.history .nopol span, .box.history .kurir span, .box.history .box.pilih-perusahaan .lokasi span, .box.pilih-perusahaan .box.history .lokasi span {
         font-weight: 300;
         display: block;
         color: #878787; }
@@ -689,13 +693,13 @@ a, a:hover, a:active, a:focus {
       border-bottom: 1px solid #e7e7e7; }
       .box.order .item:last-child {
         border-bottom: 0; }
-    .box.order .nopol, .box.order .kurir, .box.order .title {
+    .box.order .nopol, .box.order .kurir, .box.order .box.pilih-perusahaan .lokasi, .box.pilih-perusahaan .box.order .lokasi, .box.order .title {
       color: #df3143;
       font-weight: 900;
       margin-left: 40px;
       margin-bottom: 10px;
       position: relative; }
-      .box.order .nopol:before, .box.order .kurir:before, .box.order .title:before {
+      .box.order .nopol:before, .box.order .kurir:before, .box.order .box.pilih-perusahaan .lokasi:before, .box.pilih-perusahaan .box.order .lokasi:before, .box.order .title:before {
         font-family: "i-webfont";
         content: '\e829';
         color: #df3143;
@@ -704,7 +708,7 @@ a, a:hover, a:active, a:focus {
         left: -38px;
         top: -10px;
         font-weight: normal; }
-      .box.order .nopol span, .box.order .kurir span, .box.order .title span {
+      .box.order .nopol span, .box.order .kurir span, .box.order .box.pilih-perusahaan .lokasi span, .box.pilih-perusahaan .box.order .lokasi span, .box.order .title span {
         font-weight: 300;
         display: block;
         color: #878787; }
@@ -751,58 +755,230 @@ a, a:hover, a:active, a:focus {
       border-bottom: 1px solid #d6d6d6; }
       .box.mitra .item:last-child {
         border-bottom: 0; }
-    .box.mitra .md-checkbox {
-      position: relative;
-      padding: 10px 15px;
-      /*pindah*/ }
-      .box.mitra .md-checkbox label {
-        cursor: pointer;
+  .box.shipping-history {
+    padding: 5px 0 15px 0;
+    position: relative; }
+    .box.shipping-history .heading {
+      color: #df3143;
+      font-weight: 900;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #e7e7e7; }
+    .box.shipping-history .item {
+      padding: 10px 10px;
+      border-bottom: 1px solid #e7e7e7; }
+      .box.shipping-history .item:last-child {
+        border-bottom: 0; }
+    .box.shipping-history .mitra-name {
+      color: #df3143;
+      font-weight: 900;
+      margin-left: 40px;
+      margin-bottom: 1px;
+      position: relative; }
+      .box.shipping-history .mitra-name:before {
+        font-family: "i-webfont";
+        content: '\e829';
         color: #df3143;
-        font-weight: 900; }
-        .box.mitra .md-checkbox label:before, .box.mitra .md-checkbox label:after {
-          content: "";
-          position: absolute;
-          right: 15px;
-          top: 12px; }
-        .box.mitra .md-checkbox label:before {
-          width: 20px;
-          height: 20px;
-          background: #f2f2f2;
-          border: 1px solid #d6d6d6;
-          border-radius: 2px;
-          cursor: pointer;
-          transition: background .3s; }
-      .box.mitra .md-checkbox input[type="checkbox"] {
-        display: none; }
-      .box.mitra .md-checkbox a {
-        color: #000;
-        text-decoration: none;
-        display: block; }
-        .box.mitra .md-checkbox a:hover {
-          color: #bf1e2e; }
-      .box.mitra .md-checkbox input[type="checkbox"] {
-        outline: 0;
-        margin-right: 10px; }
-      .box.mitra .md-checkbox input[type="checkbox"]:checked + label:before {
-        background: #f2f2f2;
-        border: 1px solid #d6d6d6; }
-      .box.mitra .md-checkbox input[type="checkbox"]:checked + label:after {
-        transform: rotate(-45deg);
-        top: 17px;
-        right: 18px;
-        width: 12px;
-        height: 6px;
-        border: 3px solid #bf1e2e;
-        border-top-style: none;
-        border-right-style: none; }
-      .box.mitra .md-checkbox .panel-default > .panel-heading a {
-        display: block; }
-      .box.mitra .md-checkbox label {
-        cursor: pointer; }
-        .box.mitra .md-checkbox label:before, .box.mitra .md-checkbox label:after {
-          top: 12px; }
-      .box.mitra .md-checkbox input[type="checkbox"]:checked + label:after {
-        top: 17px; }
+        font-size: 24px;
+        position: absolute;
+        left: -38px;
+        top: -10px;
+        font-weight: normal; }
+    .box.shipping-history .route {
+      color: #df3143;
+      margin-left: 40px; }
+    .box.shipping-history .unit {
+      color: #df3143;
+      font-weight: 900;
+      margin-left: 40px;
+      margin-bottom: 20px; }
+    .box.shipping-history .meta {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      text-align: right; }
+    .box.shipping-history .date {
+      margin-bottom: 24px; }
+    .box.shipping-history .detail {
+      padding: 8px 20px;
+      background-color: #bf1e2e !important;
+      color: #ffffff !important;
+      border-radius: 30px;
+      font-size: 11px;
+      -webkit-box-shadow: 0 5px 15px rgba(191, 30, 46, 0.4);
+      box-shadow: 0 5px 15px rgba(191, 30, 46, 0.4); }
+  .box.pilih-perusahaan {
+    padding: 5px 0 15px 0;
+    position: relative; }
+    .box.pilih-perusahaan .heading {
+      color: #df3143;
+      font-weight: 900;
+      text-align: center;
+      padding: 10px 10px;
+      border-bottom: 1px solid #e7e7e7; }
+      .box.pilih-perusahaan .heading.text-left {
+        text-align: left; }
+      .box.pilih-perusahaan .heading span {
+        font-weight: 300; }
+    .box.pilih-perusahaan .item {
+      padding: 10px 10px;
+      border-bottom: 1px solid #e7e7e7;
+      position: relative; }
+      .box.pilih-perusahaan .item:last-child {
+        border-bottom: 0; }
+      .box.pilih-perusahaan .item > div {
+        margin-bottom: 13px; }
+    .box.pilih-perusahaan .perusahaan-name {
+      color: #df3143;
+      font-weight: 900;
+      margin-left: 40px;
+      margin-bottom: 1px;
+      position: relative; }
+      .box.pilih-perusahaan .perusahaan-name:before {
+        font-family: "i-webfont";
+        content: '\e829';
+        color: #df3143;
+        font-size: 24px;
+        position: absolute;
+        left: -38px;
+        top: -10px;
+        font-weight: normal; }
+    .box.pilih-perusahaan .nopol, .box.pilih-perusahaan .kurir, .box.pilih-perusahaan .lokasi {
+      color: #df3143;
+      font-weight: 900;
+      margin-left: 40px;
+      margin-bottom: 10px;
+      position: relative; }
+      .box.pilih-perusahaan .nopol:before, .box.pilih-perusahaan .kurir:before, .box.pilih-perusahaan .lokasi:before {
+        font-family: "i-webfont";
+        content: '\e821';
+        color: #df3143;
+        font-size: 30px;
+        position: absolute;
+        left: -38px;
+        top: -10px;
+        font-weight: normal; }
+      .box.pilih-perusahaan .nopol span, .box.pilih-perusahaan .kurir span, .box.pilih-perusahaan .lokasi span {
+        font-weight: 300;
+        display: block;
+        /*color: $font__body-color;*/ }
+    .box.pilih-perusahaan .kurir:before {
+      font-family: "i-webfont";
+      content: '\e822'; }
+    .box.pilih-perusahaan .kurir span {
+      display: inline-table;
+      color: #878787; }
+    .box.pilih-perusahaan .lokasi:before {
+      font-family: "i-webfont";
+      content: '\e82A'; }
+    .box.pilih-perusahaan .lokasi span {
+      display: inline-table; }
+    .box.pilih-perusahaan .detail {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      color: #df3143;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-weight: 900; }
+      .box.pilih-perusahaan .detail:after {
+        position: absolute;
+        top: 50%;
+        right: -28px;
+        font-weight: 400; }
+      .box.pilih-perusahaan .detail.complete {
+        color: #878787; }
+    .box.pilih-perusahaan .status {
+      position: absolute;
+      top: 20%;
+      right: 15px;
+      color: #df3143;
+      font-weight: 900;
+      text-align: right; }
+      .box.pilih-perusahaan .status span {
+        display: block;
+        font-weight: 300;
+        color: #878787;
+        margin-bottom: 15px; }
+    .box.pilih-perusahaan .status-2 {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #df3143;
+      font-weight: 900;
+      text-align: right; }
+      .box.pilih-perusahaan .status-2 span {
+        display: block;
+        font-weight: 300;
+        color: #878787;
+        margin-bottom: 10px; }
+    .box.pilih-perusahaan .detail-status {
+      margin-top: 30px;
+      padding: 8px 20px;
+      background-color: #bf1e2e !important;
+      color: #ffffff !important;
+      border-radius: 30px;
+      font-size: 11px;
+      -webkit-box-shadow: 0 5px 15px rgba(191, 30, 46, 0.4);
+      box-shadow: 0 5px 15px rgba(191, 30, 46, 0.4); }
+
+.md-checkbox {
+  position: relative;
+  padding: 10px 15px;
+  /*pindah*/ }
+  .md-checkbox label {
+    cursor: pointer;
+    color: #df3143;
+    font-weight: 900; }
+    .md-checkbox label:before, .md-checkbox label:after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 12px; }
+    .md-checkbox label:before {
+      width: 20px;
+      height: 20px;
+      background: #f2f2f2;
+      border: 1px solid #d6d6d6;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background .3s; }
+  .md-checkbox input[type="checkbox"] {
+    display: none; }
+  .md-checkbox a {
+    color: #000;
+    text-decoration: none;
+    display: block; }
+    .md-checkbox a:hover {
+      color: #bf1e2e; }
+  .md-checkbox input[type="checkbox"] {
+    outline: 0;
+    margin-right: 10px; }
+  .md-checkbox input[type="checkbox"]:checked + label:before {
+    background: #f2f2f2;
+    border: 1px solid #d6d6d6; }
+  .md-checkbox input[type="checkbox"]:checked + label:after {
+    transform: rotate(-45deg);
+    top: 17px;
+    right: 18px;
+    width: 12px;
+    height: 6px;
+    border: 3px solid #bf1e2e;
+    border-top-style: none;
+    border-right-style: none; }
+  .md-checkbox .panel-default > .panel-heading a {
+    display: block; }
+  .md-checkbox label {
+    cursor: pointer; }
+    .md-checkbox label:before, .md-checkbox label:after {
+      top: 12px; }
+  .md-checkbox input[type="checkbox"]:checked + label:after {
+    top: 17px; }
+
+.col-4 {
+  width: 33%;
+  float: left; }
 
 .box-overlap {
   margin-top: -40px;
@@ -1012,7 +1188,7 @@ a, a:hover, a:active, a:focus {
   .box .title-subtotal {
     font-size: 20px; } }
 @media (max-width: 425px) {
-  .box.history .nopol, .box.history .kurir, .box.history .kurir {
+  .box.history .nopol, .box.history .kurir, .box.history .box.pilih-perusahaan .lokasi, .box.pilih-perusahaan .box.history .lokasi, .box.history .kurir {
     font-size: 11px; }
   .box.history .detail {
     font-size: 11px; }
